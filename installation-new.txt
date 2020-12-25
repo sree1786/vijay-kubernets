@@ -143,6 +143,10 @@ kubectl describe pod/multicontainer-pods -n facebook
 
 in this only one container will run andother one will give you error
 
+kubectl exec -it pod/db bash -n facebook -c web  -> after enter inside /usr/share/nginx/html/ and also cd /var/lib/postgresql/data one get error
+kubectl exec -it pod/db bash -n facebook -c db    --> ame thing like above
+
+
 kubectl get events (yuou wont get anything)
 kubectl logs pod/multicontainer-pods -n twitter
 
