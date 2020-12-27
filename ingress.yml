@@ -89,6 +89,12 @@ kubectl apply -f ingress-resource.yml
 3- Check in backend
 
 kubectl get ingress ingress-resource
-4- Check in browser
+
+4. udate the host name 
+on local server : C:\Windows\System32\drivers\etc\host
+
+  loadbalncer ip  vijayloud.com
+  
+5- Check in browser
 
 http://external-ip-of-ingress-controller/hello
