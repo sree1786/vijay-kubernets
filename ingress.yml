@@ -1,6 +1,6 @@
 gcloud config set project smooth-ocean-179719
 gcloud config set compute/zone us-central1-a
-
+gcloud container clusters get-credentials master --zone  us-central1-c --project mineral-oarlock-298105
 
 Prerequisite
 Kubernetes Cluster up and running with master and node or GKE or EKS or any other type of k8s setup.
