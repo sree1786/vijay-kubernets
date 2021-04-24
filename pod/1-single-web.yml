@@ -1,0 +1,24 @@
+#single pod with single container attached with host storage
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  namespace: twitter
+  labels:
+    app: weapp
+    tier: backend
+    version: master
+spec:
+  containers:
+  - name: weapp
+    image: httpd
+    ports:
+      - containerPort: 80
+    volumeMounts:
+      - name: httpd
+        mountPath: /usr/local/apache2/htdocs/
+  volumes:
+  - name: httpd
+    hostPath:
+      path: /var/tmp/httpd
+      type: DirectoryOrCreate
