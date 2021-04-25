@@ -202,6 +202,9 @@ kubectl describe services
 4. Replica set
 
 https://github.com/FourTimes/Kubernetes/blob/master/replicaset/1-singlereplica.yml
+kubectl get all -n namespacename
+kubectl edit replicasetname -n namespacname
+
 https://github.com/FourTimes/Kubernetes/blob/master/replicaset/2-singlepod-singlereplica.yml
 https://github.com/FourTimes/Kubernetes/blob/master/replicaset/3-multireplica.yaml
 https://github.com/FourTimes/Kubernetes/blob/master/replicaset/4-singlepod-singlereplica-error.yaml
