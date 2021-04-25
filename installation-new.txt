@@ -209,7 +209,7 @@ https://github.com/FourTimes/Kubernetes/blob/master/replicaset/5-replica-nodepor
 
 kubectl get replicas
 kubectl describe replicas
-
+kubectl edit replicasname -n namespace
 kubectl get pod,service,replicaset -n facebook -o wide
 
 labels --> service -- selector , replica -- match ---> should be same
