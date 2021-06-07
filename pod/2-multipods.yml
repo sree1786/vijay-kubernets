@@ -1,21 +1,22 @@
----
-#single pod with multiple container's
 apiVersion: v1
 kind: Pod
 metadata:
   name: multicontainer-pods
-  namespace: facebook
+  namespace: animals
   labels:
     app: httpd
     tier: frontend-backend
     version: v1
 spec:
   containers:
-  - name: web
+  - name: web-server
     image: httpd
     ports:
     - containerPort: 80
-  - name: db
+  - name: postgres-database-server
     image: postgres
     ports:
     - containerPort: 5432
+    env:
+    - name: POSTGRES_PASSWORD
+      value: Password@12345
